@@ -13,11 +13,21 @@ MORSE_CODE = { 'a': '.-',    'b': '-...',  'c': '-.-.',  'd': '-...',  'e': '.',
                '0': '-----'}
 
 def main():
-    myMsg = "SOS This is the 1st test!"
-    myMsg2 = "... --- ... - .... .. ... .. ... - .... . .---- ... - - . ... -"
+    
+    myMsg = input(" Enter the statement you would like to encode: ")
+    myMsg2 = input(" Enter the statement you would like to decode: ")
+  
+    myMsgTest = "SOS This is the 1st test!"
+    myMsg2Test = "... --- ... - .... .. ... .. ... - .... . .---- ... - - . ... -"
 
-    print(encodeMorse(myMsg))
-    print(decodeMorse(myMsg2))
+    choice = input(" What would you like to do: \n" +
+                   "  1. Encode\n" +
+                   "  2. Decode")
+    
+    if choice == 1:
+      print(encodeMorse(myMsg))
+    else:
+      print(decodeMorse(myMsg2))
 
 def encodeMorse(msg):
     #make every character lowercase in the string
